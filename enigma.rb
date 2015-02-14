@@ -1,8 +1,9 @@
-=begin 
-This program should include 3 methods. 1 to encode a user input string based on a 'shifted' value. 2 to decode the encryted string back into the user provided string, but knowing this 'shifted' value. And 3, a method that randomly sets this 'shifted' value.
-=end
 
-# Method 1
+# This program should include 3 methods. 1 to encode a user input string based on a 'shifted' value. 2 to decode the encryted 
+# tring back into the user provided string, but knowing this 'shifted' value. And 3, a method that randomly sets this 'shifted' value.
+
+
+# Encoder mehod. This method encodes a user string by shifting each letter in the string by the value of shifter. Default shifter value = 4
 def encode (word, shifter) #This function should encrypt a user provided string by shifting each letter forward by the number of letters specided in shifter. So if shifter = 3, then 'a' => 'd', 'b' => 'e',..... 'z' => 'c'
 	alphabet = [] #Empty array to store all letters as an array
 	cipher = {} #Empty hash to store the original letter as a key and encoded (shited) letter as the value
@@ -35,13 +36,13 @@ def encode (word, shifter) #This function should encrypt a user provided string 
 end
 
 
-# Method 2
+# Decoder method. This method should decrypt the previously coded message by shifting each letter backward by the shifter value.
 def decode (code, shifter)
 
 end
 
 
-#Method 3
+# Shifter method to set the value of shifter and let is be used to encode or decode until it is explicitly changed. Consider saving the shifter value to an external file and then modify it when needed. Will need to read up on File I/O and read-write methods
 def shifter
 
 end
@@ -59,6 +60,7 @@ def mainmenu ()
 	puts ""
 end
 
+# display main menu screen when program is run
 mainmenu()
 choice = gets.chomp()
 
@@ -69,7 +71,7 @@ when "1"
 	puts "For the moment, please do NOT include any special characters or numbers. Must be letters ONLY."
 	userword = gets.chomp
 	encode(userword, 4)
-	puts "Your encoded word with default shifter 4 is #{@encrypted}"
+	puts "Your encoded word with default shifter 4 is \"#{@encrypted}\""
 	
 when "2"
 	puts "This functionality does not yet exist and is a work in progress. Please try again later."
