@@ -1,6 +1,7 @@
-=begin 
-This program should include 3 methods. 1 to encode a user input string based on a 'shifted' value. 2 to decode the encryted string back into the user provided string, but knowing this 'shifted' value. And 3, a method that randomly sets this 'shifted' value.
-=end
+
+# This program should include 3 methods. 1 to encode a user input string based on a 'shifted' value. 2 to decode the encryted 
+# tring back into the user provided string, but knowing this 'shifted' value. And 3, a method that randomly sets this 'shifted' value.
+
 
 # Encoder mehod. This method encodes a user string by shifting each letter in the string by the value of shifter. Default shifter value = 4
 def encode (word, shifter) #This function should encrypt a user provided string by shifting each letter forward by the number of letters specided in shifter. So if shifter = 3, then 'a' => 'd', 'b' => 'e',..... 'z' => 'c'
